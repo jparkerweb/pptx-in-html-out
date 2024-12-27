@@ -1,0 +1,46 @@
+{
+  "name": "pptx-in-html-out",
+  "version": "0.0.1",
+  "description": "Convert PowerPoint presentations to HTML with full fidelity",
+  "main": "src/index.js",
+  "type": "module",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "clean": "rm -rf node_modules && rm -rf package-lock.json && npm install",
+    "example": "node example.js"
+  },
+  "keywords": [
+    "pptx",
+    "powerpoint",
+    "html",
+    "converter",
+    "ocr",
+    "presentation"
+  ],
+  "author": "Justin Parker",
+  "license": "MIT",
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "sharp": "^0.33.5",
+    "tesseract.js": "^5.1.1",
+    "xml2js": "^0.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jparkerweb/pptx-in-html-out.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jparkerweb/pptx-in-html-out/issues"
+  },
+  "homepage": "https://github.com/jparkerweb/pptx-in-html-out#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
