@@ -52,9 +52,21 @@ const converter = new PPTXInHTMLOut(pptxBuffer);
 
 #### Methods
 
-##### `toHTML()`
+##### `toHTML(options)`
 
-Converts the PPTX to HTML.
+Converts the presentation to HTML.
+
+Parameters:
+- `options` (optional): Configuration object
+  - `includeStyles` (boolean, default: true): Whether to include default styles in the output HTML
+
+```javascript
+// With default styles
+const html = await converter.toHTML();
+
+// Without default styles (for custom styling)
+const html = await converter.toHTML({ includeStyles: false });
+```
 
 Returns: `Promise<string>` - The generated HTML content
 

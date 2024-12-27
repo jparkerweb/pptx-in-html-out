@@ -439,11 +439,11 @@ export class PPTXInHTMLOut {
     }
   }
 
-  async toHTML() {
+  async toHTML(options = { includeStyles: true }) {
     try {
       await this.initialize();
       const slides = await this.parseSlides();
-      const html = await this.generateHTML(slides);
+      const html = await this.generateHTML(slides, options);
       return html;
     } catch (error) {
       console.error('Error converting to HTML:', error);
@@ -451,7 +451,7 @@ export class PPTXInHTMLOut {
     }
   }
 
-  async generateHTML(slides) {
+  async generateHTML(slides, options = { includeStyles: true }) {
     let slidesHTML = '';
     for (const slide of slides) {
       const slideHTML = await this.convertSlideToHTML(slide);
@@ -463,8 +463,7 @@ export class PPTXInHTMLOut {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PowerPoint Presentation</title>
-  ${this.generateStyles()}
+  ${options.includeStyles ? this.generateStyles() : ''}
 </head>
 <body>${slidesHTML}</body>
 </html>`;

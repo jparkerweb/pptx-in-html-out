@@ -11,7 +11,7 @@ const converter = new PPTXInHTMLOut(pptxBuffer);
     
 // Convert to HTML
 console.log('Starting conversion...');
-const html = await converter.toHTML();
+const html = await converter.toHTML({ includeStyles: false });
     
 // Output the HTML
 console.log('HTML output:', html);
