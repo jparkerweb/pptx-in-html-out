@@ -1,5 +1,7 @@
 # ⚙️ PPTX In HTML Out
 
+<img src="https://github.com/jparkerweb/pptx-in-html-out/blob/main/pptx-in-html-out.jpg?raw=true" alt="banner">
+
 Convert PowerPoint presentations to HTML with high fidelity.
 
 ## Installation
